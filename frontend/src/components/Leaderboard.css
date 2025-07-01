@@ -1,0 +1,146 @@
+/* Leaderboard.css */
+.leaderboard-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    color: #f0f0f3;
+    font-family: 'Orbitron', sans-serif;
+    min-height: 100vh;
+}
+
+.game-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.game-header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 2px;
+}
+
+.leaderboard-card {
+    background: rgba(26, 26, 46, 0.8);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.leaderboard-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, #6a11cb, #2575fc, #ff2d75);
+}
+
+.home-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid #2575fc;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+}
+
+.home-btn:hover {
+    background: rgba(37, 117, 252, 0.3);
+    transform: translateY(-3px);
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.leaderboard-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 1rem;
+}
+
+.leaderboard-table th {
+    background: rgba(37, 117, 252, 0.2);
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 2px solid #2575fc;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.leaderboard-table td {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.leaderboard-table tr {
+    transition: all 0.2s ease;
+}
+
+.leaderboard-table tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.rank-1 {
+    background: linear-gradient(to right, rgba(255, 215, 0, 0.1), transparent);
+}
+
+.rank-2 {
+    background: linear-gradient(to right, rgba(192, 192, 192, 0.1), transparent);
+}
+
+.rank-3 {
+    background: linear-gradient(to right, rgba(205, 127, 50, 0.1), transparent);
+}
+
+.rank-badge {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: #2575fc;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.game-footer {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.hint-text {
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 768px) {
+    .leaderboard-container {
+        padding: 1rem;
+    }
+    
+    .leaderboard-card {
+        padding: 1.5rem;
+    }
+}
