@@ -1,0 +1,24 @@
+# backend/wrangler.toml
+
+name = "guessing-game"
+main = "src/index.js"
+compatibility_date = "2024-05-01" # 👈 UPDATE THIS to a recent date
+
+[[durable_objects.bindings]]
+name = "GAME_SESSIONS"
+class_name = "GameSession"
+
+# 👇 THIS SECTION IS THE FIX
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["GameSession"]
+
+# Global environment vars
+[vars]
+SUPABASE_URL = "https://iuulyqbemxomyaviiokt.supabase.co"
+SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml1dWx5cWJlbXhvbXlhdmlpb2t0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTEzNzA4MzQsImV4cCI6MjA2Njk0NjgzNH0.S-0Jt6tGCQxE2G3oL_O2zgtllW5o4FIGfDrZd8bPb5I"
+
+# Production overrides (optional)
+[env.production.vars]
+SUPABASE_URL = "https://iuulyqbemxomyaviiokt.supabase.co"
+SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml1dWx5cWJlbXhvbXlhdmlpb2t0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTEzNzA4MzQsImV4cCI6MjA2Njk0NjgzNH0.S-0Jt6tGCQxE2G3oL_O2zgtllW5o4FIGfDrZd8bPb5I"

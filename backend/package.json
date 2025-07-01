@@ -1,0 +1,18 @@
+{
+    "name": "guessing-game-backend",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "main": "src/index.js",
+    "scripts": {
+      "dev": "wrangler dev",
+      "deploy": "wrangler publish --env production"
+    },
+    "dependencies": {
+      "@supabase/supabase-js": "^2.36.0"
+    },
+    "devDependencies": {
+      "wrangler": "^4.22.0"
+    }
+  }
+  
