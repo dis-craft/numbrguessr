@@ -38,7 +38,7 @@ async function apiRequest(endpoint, options = {}) {
 // --- API Functions ---
 
 export const submitSingle = (playerName, guesses, timeMs) => {
-    return apiRequest('/single', {
+    return apiRequest('single', {
         method: 'POST',
         body: { playerName, guesses, timeMs },
     });
